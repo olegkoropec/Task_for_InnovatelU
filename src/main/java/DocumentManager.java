@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  * This class could be auto tested
  */
 public class DocumentManager {
-
+    Map<String, Document> documentMap = new HashMap<>();
     /**
      * Implementation of this method should upsert the document to your storage
      * And generate unique id if it does not exist, don't change [created] field
@@ -24,7 +24,6 @@ public class DocumentManager {
      * @return saved document
      */
     public Document save(Document document) {
-        Map<String, Document> documentMap = new HashMap<>();
         if (document.getId() == null) {
             document = document.builder()
                     .id(UUID.randomUUID().toString())
@@ -46,7 +45,6 @@ public class DocumentManager {
      * @return list matched documents
      */
     public List<Document> search(SearchRequest request) {
-        Map<String, Document> documentMap = new HashMap<>();
         return documentMap.values().stream()
                 .filter(document -> matchTitlePrefixes(document, request.getTitlePrefixes()))
                 .filter(document -> matchContent(document, request.getContainsContents()))
@@ -55,7 +53,7 @@ public class DocumentManager {
                 .collect(Collectors.toList());
     }
 
-    private boolean matchTitlePrefixes(Document document, List<String> titlePrefixes) {
+    boolean matchTitlePrefixes(Document document, List<String> titlePrefixes) {
         if (titlePrefixes == null || titlePrefixes.isEmpty())
             return true;
 
@@ -66,17 +64,17 @@ public class DocumentManager {
         return false;
     }
 
-    private boolean matchContent(Document document, List<String> containsContents) {
+    boolean matchContent(Document document, List<String> containsContents) {
         if (containsContents == null || containsContents.isEmpty())
             return true;
         for (String content : containsContents) {
-            if (document.getContent() != null && document.getContent().equals(content))
+            if (document.getContent() != null && document.getContent().contains(content))
                 return true;
         }
         return false;
     }
 
-    private boolean matchAuthorIds(Document document, List<String> authorIds) {
+    boolean matchAuthorIds(Document document, List<String> authorIds) {
         if (authorIds == null || authorIds.isEmpty())
             return true;
         for (String id : authorIds)
@@ -85,7 +83,7 @@ public class DocumentManager {
         return false;
     }
 
-    private boolean matchCreatedFromTo(Document document, Instant createdFrom, Instant createdTo) {
+    boolean matchCreatedFromTo(Document document, Instant createdFrom, Instant createdTo) {
         if (createdFrom != null && document.getCreated().isBefore(createdFrom)) {
             return false;
         }
@@ -103,7 +101,6 @@ public class DocumentManager {
      * @return optional document
      */
     public Optional<Document> findById(String id) {
-        Map<String, Document> documentMap = new HashMap<>();
         if (id == null) {
             return Optional.empty();
         }

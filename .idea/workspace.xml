@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc3ad38d-f9ba-4406-af0b-d5c855e534a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DocumentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DocumentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DocumentManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DocumentManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DocumentManager$Author$AuthorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DocumentManager$Author$AuthorBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DocumentManager$Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DocumentManager$Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DocumentManager$Document$DocumentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DocumentManager$Document$DocumentBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DocumentManager$Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DocumentManager$Document.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DocumentManager$SearchRequest$SearchRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DocumentManager$SearchRequest$SearchRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DocumentManager$SearchRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DocumentManager$SearchRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DocumentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DocumentManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DocumentManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DocumentManagerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +66,17 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DocumentManagerTest.findById">
+    <configuration name="DocumentManagerTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task_for_InnovatelU" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DocumentManagerTest" />
+      <option name="METHOD_NAME" value="findById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DocumentManagerTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task_for_InnovatelU" />
       <option name="PACKAGE_NAME" value="" />
@@ -69,8 +87,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DocumentManagerTest.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task_for_InnovatelU" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DocumentManagerTest" />
+      <option name="METHOD_NAME" value="search" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DocumentManagerTest.findById" />
+        <item itemvalue="JUnit.DocumentManagerTest.search" />
         <item itemvalue="JUnit.DocumentManagerTest.save" />
       </list>
     </recent_temporary>
